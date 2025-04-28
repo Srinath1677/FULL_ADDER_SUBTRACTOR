@@ -48,36 +48,23 @@ Write the detailed procedure here
 Developed by: Srinath YG RegisterNumber:212224230274
 */
 ```verilog
-module exp4_adder(a, b, cin, sum, carry);
-
-input a, b, cin;
-output sum, carry;
-
-assign sum = (a ^ b) ^ cin;
-assign carry = (a & b) | (cin & (a ^ b));
-
-endmodule
-
-module exp4_subtractor(a, b, bin, difference, borrow);
-
-input a, b, bin;
-output difference, borrow;
-
-assign difference = (a ^ b) ^ bin;
-assign borrow = (a & b) | (bin & (a ^ b));
-
+module EXPERIMENT4(a, b, cin, sum, carry,bin, difference, borrow);
+input a, b, cin,bin;
+output sum, carry,difference,borrow;
+assign sum = ( (a^ b) ^ cin);
+assign carry = ( (a & b)| ( cin & (a ^ b) ) );
+assign difference = (a^ b)^bin;
+assign borrow= ( a & b)| ( bin & ((a^b )));
 endmodule
 ```
 
 **RTL Schematic**
+![image](https://github.com/user-attachments/assets/7b254979-8e87-4ff5-9f83-1f8bab21ae16)
 
-![d04b4d2b-a694-4021-847e-af276b63de08](https://github.com/user-attachments/assets/eb134dab-87da-4849-b55a-4e9b92978328)
-![b1a870e2-a8bf-4540-820d-3568b1bb0986](https://github.com/user-attachments/assets/7b40534e-8554-415a-b7fb-a00ab93cb265)
 
 
 **Output Timing Waveform**
-![436915456-ec6e88d4-fc17-4922-b02a-111fab80daa6](https://github.com/user-attachments/assets/70a27c99-f523-4e97-9a56-58c42e20776e)
-![436915580-5bd66fbb-ee2a-4e99-ab22-2deb95551985](https://github.com/user-attachments/assets/360727c7-5667-47ef-8d76-b6b719f4ff12)
+![image](https://github.com/user-attachments/assets/1e711c42-427d-4883-9321-6629d2c9269d)
 
 
 **Result:**
